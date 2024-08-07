@@ -1,0 +1,12 @@
+[Unit]
+Description=Docker Swarm Exporter
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/docker_swarm_exporter_amd64 -port 8087
+
+[Install]
+WantedBy=multi-user.target
